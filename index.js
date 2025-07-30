@@ -26,14 +26,14 @@ for (const { fish } of allFish) {
 }
 
 const easy = allPossibleFish.filter(f => f.price > 0 && f.price < 1000);
-const medium = allPossibleFish.filter(f => f.price >= 1000 && f.price < 15000);
-const hard = allPossibleFish.filter(f => f.price >= 20000 && f.price < 60000);
-const superHard = allPossibleFish.filter(f => f.price >= 60000);
+const medium = allPossibleFish.filter(f => f.price >= 1000 && f.price < 10000);
+const hard = allPossibleFish.filter(f => f.price >= 10000 && f.price < 50000);
+const superHard = allPossibleFish.filter(f => f.price >= 50000);
 
 // select 1 super hard fish, 3 hard fish, 9 medium fish, and 12 easy fish
 let board = [];
-let average = 8500;
-while (average >= 8500) {
+let average = 7500;
+while (average >= 7500) {
     const selectedFish = [
         superHard[Math.floor(Math.random() * superHard.length)],
         ...hard.sort(() => 0.5 - Math.random()).slice(0, 3),
